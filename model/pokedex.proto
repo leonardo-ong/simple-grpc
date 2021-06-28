@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option go_package = "grpc_pokedex/model";
+
+import "google/protobuf/Empty.proto";
+
+package model;
+
+service Pokedex{
+    rpc TotalPokemon(google.protobuf.Empty) returns (PokemonCount){}
+    rpc GetPokemon(PokemonId) returns (Pokemon) {}
+    rpc GetPokemonList(google.protobuf.Empty) returns (PokemonList){}
+}
+
+message PokemonId{
+    string id = 1;
+}
+
+message PokemonCount {
+    int32 count = 1;
+}
+
+message Pokemon{
+    string id = 1;
+    string name = 2;
+    string height = 3;
+    string weight = 4;
+    string types = 5;
+}
+
+message PokemonList{
+    repeated Pokemon list = 1;
+}
