@@ -43,7 +43,7 @@ func (r *queryResolver) Pokemons(ctx context.Context) ([]*model.Pokemon, error) 
 		pokemon.Name = val.Name
 		pokemon.Height = int(val.Height)
 		pokemon.Weight = int(val.Weight)
-		pokemon.Types = &model.Type{TypeName: val.Name}
+		pokemon.Types = &model.Type{TypeName: val.Types}
 
 		pokemons = append(pokemons, &pokemon)
 	}
