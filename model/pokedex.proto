@@ -13,7 +13,7 @@ service Pokedex{
 }
 
 message PokemonId{
-    string id = 1;
+    int32 id = 1;
 }
 
 message PokemonCount {
@@ -21,10 +21,10 @@ message PokemonCount {
 }
 
 message Pokemon{
-    string id = 1;
+    int32 id = 1;
     string name = 2;
-    string height = 3;
-    string weight = 4;
+    int32 height = 3;
+    int32 weight = 4;
     string types = 5;
 }
 

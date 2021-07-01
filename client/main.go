@@ -35,7 +35,7 @@ func main() {
 	log.Printf("Total Pokemon : %v", totalPokemon.Count)
 
 	pokemonId := model.PokemonId{
-		Id: "001",
+		Id: 1,
 	}
 
 	pokemon, err := pokedex.GetPokemon(context.Background(), &pokemonId)
@@ -43,7 +43,7 @@ func main() {
 		log.Fatal(err.Error())
 	}
 
-	log.Printf("Pokemon : \n Id : %s \n Name : %s \n Height : %s \n Weight : %s \n Types : %s", pokemon.Id, pokemon.Name, pokemon.Height, pokemon.Weight, pokemon.Types)
+	log.Printf("Pokemon : \n Id : %v \n Name : %s \n Height : %v \n Weight : %v \n Types : %s", pokemon.Id, pokemon.Name, pokemon.Height, pokemon.Weight, pokemon.Types)
 
 	pokemonList, err := pokedex.GetPokemonList(context.Background(), new(empty.Empty))
 	if err != nil {
