@@ -15,4 +15,4 @@ End result GRPC using client server:
 
 End result connection with GQL:
 
-![Alt screenshot](image/result_gql1.png?raw=true "Screenshot Result GQL")
+![Alt screenshot](image/result_gql2.png?raw=true "Screenshot Result GQL")
